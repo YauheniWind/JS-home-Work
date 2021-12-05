@@ -5,7 +5,7 @@ const thirdArr = [1, 2, 3, 5, 19, 76, -67, 78];
 
 
 
-function sum(arr) {
+function calcArrays(arr) {
     let sumPos = 0;
 
     for (let i = 0; i <= arr.length; i++) {
@@ -18,9 +18,9 @@ function sum(arr) {
     return sumPos;
 };
 
-const firstSum = sum(fisrtArr);
+const firstSum = calcArrays(fisrtArr);
 console.log(`Result 1: `, firstSum)
-const secondSum = sum(secondArr);
+const secondSum = calcArrays(secondArr);
 console.log(`Result 2: `, secondSum)
-const thirdSum = sum(thirdArr);
+const thirdSum = calcArrays(thirdArr);
 console.log(`Result 3: `, thirdSum)
