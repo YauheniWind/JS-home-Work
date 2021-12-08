@@ -15,12 +15,11 @@ userValera = {
     transactions: [133, 1313, 59, 2],
 }
 
-console.everyUser = function (prifix, userName) {
-    for (let i = 0; i < userName.length; i++) {
-        userName[i].userName
-        console.log(prifix + '' + userName[i])
+console.everyUser = function (prifix, users) {
+    for (let i = 0; i < users.length; i++) {
+        console.log(prifix + '' + users[i].name)
     };
 };
 
 
-console.everyUser('Имя пользвателя: ', [userVasya.name, userPetiya.name, userValera.name]);
+console.everyUser('Имя пользвателя: ', [userVasya, userPetiya, userValera]);
