@@ -18,8 +18,8 @@ const getNewArrFromGroup = (arr) => {
         };
 
     };
-    newArr.shift(arr)
-    newArr.pop(arr)
+    newArr.shift()
+    newArr.pop()
 
     return newArr;
 };
