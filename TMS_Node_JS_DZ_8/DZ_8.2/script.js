@@ -12,6 +12,8 @@ for (let i = 0; i < files.length; i++) {
 }
 console.log(pdfFiles);
 
+
+// решение через filter()
 let someNewPdf = files.filter(element => ['pdf'].includes(element.split('.').pop()));
 
 console.log(someNewPdf)
