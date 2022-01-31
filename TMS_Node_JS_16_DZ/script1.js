@@ -1,6 +1,6 @@
 const cleanRoom = dirtyLevel => {
     return new Promise((resolve) => {
-        return setTimeout(() => resolve(dirtyLevel), dirtyLevel * 1000)
+        setTimeout(() => resolve(dirtyLevel), dirtyLevel * 1000)
     })
 }
 
