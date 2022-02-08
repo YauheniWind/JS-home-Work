@@ -1,7 +1,7 @@
 const cleanRoom = dirtyLevel => {
     return new Promise((resolve, reject) => {
-        if (dirtyLevel < 0 && dirtyLevel > 10) {
-            reject('clean is fail')
+        if (dirtyLevel < 0 || dirtyLevel > 10) {
+            reject('Мы не можем убрать эту комнату')
         } else {
             setTimeout(() => resolve(dirtyLevel), dirtyLevel * 1000)
         }
@@ -14,25 +14,19 @@ const cleanRoom = dirtyLevel => {
 function cleanRoomsStepByStep(dirtyLevel_1, dirtyLevel_2, dirtyLevel_3) {
     cleanRoom(dirtyLevel_1)
         .then(res => {
-            if (res < 0 || res > 10) {
-                console.log('Мы не можем убрать эту комнату', res)
-            } else {
+            if (res > 0 || res < 10) {
                 console.info(`Комната убрана за ${res} сек`)
             }
             return cleanRoom(dirtyLevel_2)
         })
         .then(res => {
-            if (res < 0 || res > 10) {
-                console.log('Мы не можем убрать эту комнату', res)
-            } else {
+            if (res > 0 || res < 10) {
                 console.info(`Комната убрана за ${res} сек`)
             }
             return cleanRoom(dirtyLevel_3)
         })
         .then(res => {
-            if (res < 0 || res > 10) {
-                console.log('Мы не можем убрать эту комнату', res)
-            } else {
+            if (res > 0 || res < 10) {
                 console.info(`Комната убрана за ${res} сек`)
             }
         })
