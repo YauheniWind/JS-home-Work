@@ -8,12 +8,18 @@ let str = ' [ {"car": "BMW", "model": "5-series e39"}, {"car": "Honda", "model":
 
 let parsStr = JSON.parse(str)
 
-parsStr.filter((e) => {
+germanArr = parsStr.filter((e) => {
     if (e.name === germanCars[1] || e.car === germanCars[0]) {
-        germanArr.push(e)
+        return e
     }
     if (e.name === japanCars[1] || e.car === japanCars[0]) {
         japanArr.push(e)
+    }
+})
+
+japanArr = parsStr.filter((e) => {
+    if (e.name === japanCars[1] || e.car === japanCars[0]) {
+        return e
     }
 })
 
@@ -22,7 +28,6 @@ let japanCarsString = JSON.stringify(japanArr);
 
 console.log(germanCarsString)
 console.log(japanCarsString)
-
 
 //--------------------------------------------------------------------------------------------------
 // Вариант 2
