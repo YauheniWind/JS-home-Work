@@ -9,22 +9,18 @@ async function getId() {
 
     if (response.ok) {
 
-        data.filter((a) => {
+        albumsArr = data.filter((a) => {
             if (a.userId === 1 || a.userId === 4) {
-                albumsArr.push(a)
+                return a
             }
         })
 
         console.log('DATA IN', albumsArr)
+        return albumsArr
     }
 }
+
 getId()
-
-setTimeout(getDataOut, 1000)
-
-function getDataOut() {
-    console.log('DATA OUT', albumsArr)
-}
 
 // Вариант 2
 // const url = 'https://jsonplaceholder.typicode.com/albums';
