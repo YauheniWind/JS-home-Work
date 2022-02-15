@@ -110,7 +110,7 @@ async function deleteResponse() {
 
         if (response.ok) {
             let data = await response.json()
-            console.log('DATA IN PATCH RESPONSE', data)
+            console.log('DATA IN DELETE RESPONSE', data)
         } else {
             console.log('Request is not succsess')
         }
